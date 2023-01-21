@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
   belongs_to :kind #, optional: true
+  has_many :phones
   
   # def author
   #   "Wesley Maia"
