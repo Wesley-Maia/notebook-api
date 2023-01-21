@@ -13,7 +13,8 @@ class ContactsController < ApplicationController
   def show
     # render json: @contact
     # render json: @contact, include: :kind
-    render json: @contact.to_br
+    # render json: @contact.to_br
+    render json: @contact
   end
 
   # POST /contacts
