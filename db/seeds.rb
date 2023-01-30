@@ -30,3 +30,10 @@ Contact.all.each do |contact|
     contact.save!
   end
 end
+
+Contact.all.each do |contact| 
+  Address.create(
+    street: Faker::Address.street_address,
+    city: Faker::Address.city,
+    contact: contact)
+end
