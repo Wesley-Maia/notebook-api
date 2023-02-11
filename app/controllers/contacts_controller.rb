@@ -16,7 +16,8 @@ class ContactsController < ApplicationController
     # render json: @contact.to_br
     # render json: @contact
     # render json: @contact, include: [:kind, :phones, :address]
-    render json: @contact, include: [:kind]
+    # render json: @contact, include: [:kind]
+    render json: @contact, include: [:kind, :address, :phones]
   end
 
   # POST /contacts
