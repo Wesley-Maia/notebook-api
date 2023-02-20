@@ -1,4 +1,7 @@
 class KindsController < ApplicationController
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  http_basic_authenticate_with name: "jack", password: "secret"
+  
   before_action :set_kind, only: [:show, :update, :destroy]
 
   # GET /kinds
